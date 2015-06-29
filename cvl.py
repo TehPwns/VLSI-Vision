@@ -13,7 +13,7 @@ def getClusterImage(I):
 
     # define criteria, number of clusters(2) and apply kmeans()
     criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10, 10.0)
-    ret,label,center=cv2.kmeans(Z,2,None,criteria,10,cv2.KMEANS_RANDOM_CENTERS)
+    ret,label,center=cv2.kmeans(Z,2,criteria,10,cv2.KMEANS_RANDOM_CENTERS)
 
     # Now convert back into uint8, and make original image
     #label = ~label.astype(bool)
